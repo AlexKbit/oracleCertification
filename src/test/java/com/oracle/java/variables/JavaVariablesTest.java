@@ -1,26 +1,24 @@
-package com.oracle.java.variables.integer;
-
-import static org.junit.Assert.assertEquals;
+package com.oracle.java.variables;
 
 import org.junit.Test;
 
 /**
- * Test for dafault value in types
+ * Test for variable for types
  */
-public class IntegerVariablesTest {
+public class JavaVariablesTest {
 
 	@Test(expected = NumberFormatException.class)
-	public void testCreateDoubleFormat() {
+	public void testCreateIntegerInDoubleFormat() {
 		new Integer("32.3");		
 	}
 	
 	@Test(expected = NumberFormatException.class)
-	public void testCreateStringFormat() {
+	public void testCreateIntegerFromStringFormat() {
 		new Integer("hello");		
 	}
 	
 	@Test(expected = NumberFormatException.class)
-	public void testIncorrectParse() {
+	public void testCreateIntegerIncorrectParse() {
 		Integer.parseInt("232.23");
 	}
 }
