@@ -6,6 +6,7 @@ public class ApplicationStringBuilder {
 		checkHash();
 		checkEquals();
 		checkDelete();
+		initSB();
 	}
 	
 	private static void checkHash() {
@@ -31,5 +32,13 @@ public class ApplicationStringBuilder {
 			System.out.println(b1 + " " + b1.length());
 		}
 		// result: "tigufr 6";
+	}
+	
+	private static void initSB() {
+		new StringBuilder();
+		new StringBuilder(5);
+		// CE: new StringBuilder(6.0);
+		new StringBuilder("b");
+		// CE : new StringBuilder(false);	
 	}
 }

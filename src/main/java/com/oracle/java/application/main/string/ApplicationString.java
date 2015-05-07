@@ -7,6 +7,7 @@ public class ApplicationString {
 		strings();
 		compareStrings();
 		copareWithBuilder();
+		stringSubstring();
 	}
 	
 	private static void compareString() {
@@ -45,5 +46,12 @@ public class ApplicationString {
 		boolean r = s.equals(b); // s == b : Compilation error
 		System.out.println(r);
 		System.out.println(s.compareTo(b.toString()));
+	}
+	
+	private static void stringSubstring() {		
+		String s = "abcde";
+		// Need gets 'c'
+		String answer = s.substring(2, 3);
+		System.out.println(answer);
 	}
 }
