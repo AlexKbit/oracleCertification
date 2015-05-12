@@ -9,5 +9,18 @@ public class ApplicationSwitch {
 		case 0: System.out.println("default");
 		}
 		// default default - because default before case
+		
+		Variant v = Variant.three;
+		switch( v) {
+		default: System.out.println("defaultVariant");
+		case one: System.out.println("one");
+		case two: System.out.println("two");
+		case three: System.out.println("three");
+		}
+		//this is realy interest, print only: three
+	}
+	
+	enum Variant {
+		one,two,three
 	}
 }
