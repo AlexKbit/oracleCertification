@@ -1,7 +1,7 @@
 package com.oracle.java.application.main.inheritence;
 
 public class ApplicationClassExAbstract extends Insect {
-
+	
 	public ApplicationClassExAbstract(String color) {
 		super(color);
 		System.out.println("3");
