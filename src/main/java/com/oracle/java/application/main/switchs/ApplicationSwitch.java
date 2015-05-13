@@ -12,8 +12,8 @@ public class ApplicationSwitch {
 		
 		Variant v = Variant.three;
 		switch( v) {
-		default: System.out.println("defaultVariant");
-		case one: System.out.println("one");
+		
+		case one: default: System.out.println("defaultVariant"); System.out.println("one");
 		case two: System.out.println("two");
 		case three: System.out.println("three");
 		}
