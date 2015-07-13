@@ -6,9 +6,9 @@ public class AppClassWithTwoInterface {
 
 /*public class AppClassWithTwoInterface implements I1, I2 {
 // Duplicate default methods named work with the parameters () and () are inherited from the types I2 and I1
-}*/
+}
 
-/*public class AppClassWithTwoInterface extends ClassI2 implements I1 {
+public class AppClassWithTwoInterface extends ClassI2 implements I1 {
 	// Duplicate default methods named work with the parameters () and () are inherited from the types I2 and I1
 }*/
 
