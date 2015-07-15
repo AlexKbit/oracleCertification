@@ -5,7 +5,6 @@ public class ApplicationRunnable {
 	static final String SURNAME = "Jonson";
 	
 	public static void main(String[] arg) {
-		
 		MyRunnable r = ApplicationRunnable::work;
 		r.run(NAME,SURNAME);
 	}
@@ -15,6 +14,7 @@ public class ApplicationRunnable {
 	}
 }
 
+@FunctionalInterface
 interface MyRunnable {
 	void run(String name, String surname);
 }
