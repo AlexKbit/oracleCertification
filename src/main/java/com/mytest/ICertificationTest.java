@@ -1,5 +1,9 @@
 package com.mytest;
 
+/**
+ * Special interface for simple programming process
+ * @author aSavchen
+ */
 public interface ICertificationTest {
 
 	public default void sysout(Object... objcts) {
