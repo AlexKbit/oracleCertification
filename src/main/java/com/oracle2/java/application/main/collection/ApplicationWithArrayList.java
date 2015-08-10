@@ -12,6 +12,7 @@ public class ApplicationWithArrayList implements ICertificationTest{
 		app.methodObjectList();
 		app.methodArrayLength();
 		app.spliterator();
+		app.checkSize();
 	}
 	
 	private void methodObjectList() {
@@ -37,5 +38,19 @@ public class ApplicationWithArrayList implements ICertificationTest{
 		sysout(list);
 		list.sort((a,b)->b-a); //desc sort
 		sysout(list);
+	}
+	
+	private void checkSize() {
+		//Debug this
+		ArrayList<String> list = new ArrayList<>(12); // set size for inner array, but size = 0
+		list.add("1");
+		list.add("2");
+		list.add("3");
+		list.add("4");
+		list.add("5");
+		
+		sysout(list.size());  
+		list.trimToSize();
+		sysout(list.size());
 	}
 }
