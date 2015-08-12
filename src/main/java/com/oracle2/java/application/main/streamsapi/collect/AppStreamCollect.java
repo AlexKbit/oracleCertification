@@ -2,6 +2,7 @@ package com.oracle2.java.application.main.streamsapi.collect;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -20,6 +21,8 @@ public class AppStreamCollect {
 		collect(letters);
 		collectToList(letters);
 		collectToTreeSet(letters);
+		collectSummInInt(letters);
+		collectToMap(letters);
 	}
 	
 	private static void collect(List<String> letters) {
@@ -45,5 +48,16 @@ public class AppStreamCollect {
 		                          .map(s -> s.toUpperCase())
 		                          .collect(Collectors.toCollection(TreeSet::new));
 		System.out.println("TreeSet: "+set);
+	}
+	
+	private static void collectSummInInt(List<String> letters) {
+		int total = letters.stream().collect(Collectors.summingInt(s -> s.length()));
+		System.out.println("Summ: "+total);
+	}
+	
+	private static void collectToMap(List<String> letters) {
+		Map<Boolean, List<String>> upperLower = letters.stream()
+                .collect(Collectors.partitioningBy(s -> Character.isUpperCase(s.codePointAt(0))));
+		System.out.println("Map: "+upperLower);
 	}
 }
