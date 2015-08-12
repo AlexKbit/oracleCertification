@@ -12,8 +12,5 @@ public class FileService {
 	public static final boolean createOutputDirectories() {
 		return (new File(OUTPUT_FILES)).mkdirs();
 	}
-	
-	public static void main(String[] args) {
-		System.out.println(createOutputDirectories());		
-	}
+
 }
