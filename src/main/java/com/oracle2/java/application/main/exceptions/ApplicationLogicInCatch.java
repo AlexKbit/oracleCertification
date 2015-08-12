@@ -13,6 +13,7 @@ public class ApplicationLogicInCatch {
 		} catch (MyException | MySecondException e) { // This work only for '|'
 			System.out.println("So bad");
 		}
+		System.out.println("After try/catch");
 	}
 	
 	public static void throwMyEx() throws MyException {
