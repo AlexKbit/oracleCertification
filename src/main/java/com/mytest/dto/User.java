@@ -1,6 +1,6 @@
 package com.mytest.dto;
 
-public class User {
+public class User implements Comparable<User>{
 
 	private int id;
 	private String name;
@@ -54,5 +54,37 @@ public class User {
 		return new User(name, surname, password, email);
 	}
 	
+	public static User create(Integer id, String name, String surname, String password, String email) {
+		User user = new User(name, surname, password, email);
+		user.setId(id);
+		return user;
+	}
+	
+	@Override
+	public boolean equals(Object object) {
+		if (object == null) return false;
+		if (object.hashCode() != this.hashCode()) return false;
+		if (object == this) return true;
+		User user = (User) object;
+		
+		return user.id == this.id && this.email.equals(user.email)
+				&& this.name.equals(user.name) && this.password.equals(user.password)
+				&& this.email.equals(user.email);	
+	}
+	
+	@Override
+	public int hashCode() {
+		return id + name.length() + surname.length() + password.length();		
+	}
+
+	@Override
+	public int compareTo(User o) {
+		if (this.id == o.id)
+			return 0;
+		if (this.id > o.id)
+			return 1;
+		else
+			return -1;		
+	}
 	
 }
