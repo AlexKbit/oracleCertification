@@ -22,7 +22,8 @@ public class AppOptional {
 			System.out.println("Throw in trap:)");
 		}
 		
-		System.out.println(nullableOptional.isPresent()); //There is the possiblity to check value is null or not		
+		System.out.println(nullableOptional.isPresent()); //There is the possiblity to check value is null or not	
+		nullableOptional.ifPresent(System.out::println); // do if value not null
 	}
 	
 	private static void emptyOption() {
