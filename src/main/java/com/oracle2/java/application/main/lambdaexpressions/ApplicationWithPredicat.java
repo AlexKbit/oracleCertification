@@ -1,4 +1,4 @@
-package com.oracle2.java.application.main.expressions;
+package com.oracle2.java.application.main.lambdaexpressions;
 
 import java.util.function.Predicate;
 
