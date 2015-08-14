@@ -4,8 +4,8 @@ import java.io.File;
 
 public class FileService {
 	
-	private static final String INPUT_FILES = "./inputFiles";
-	private static final String OUTPUT_FILES = "./outputFiles";
+	public static final String INPUT_FILES = "./inputFiles";
+	public static final String OUTPUT_FILES = "./outputFiles";
 	
 	public static final String FILE_WITH_LINES = INPUT_FILES.concat("/fileWithLines.txt");
 	
