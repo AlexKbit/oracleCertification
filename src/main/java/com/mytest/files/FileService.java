@@ -12,5 +12,10 @@ public class FileService {
 	public static final boolean createOutputDirectories() {
 		return (new File(OUTPUT_FILES)).mkdirs();
 	}
+	
+	public static final String createNew(String name) {
+		createOutputDirectories();
+		return OUTPUT_FILES.concat("/").concat(name);
+	}
 
 }
