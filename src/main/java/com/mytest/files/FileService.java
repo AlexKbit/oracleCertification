@@ -13,7 +13,7 @@ public class FileService {
 		return (new File(OUTPUT_FILES)).mkdirs();
 	}
 	
-	public static final String createNew(String name) {
+	public static final String pathOutputFor(String name) {
 		createOutputDirectories();
 		return OUTPUT_FILES.concat("/").concat(name);
 	}

@@ -29,7 +29,7 @@ public class AppWriterReader {
 	}
 	
 	private static void write() throws IOException {
-		Writer writer = new FileWriter(FileService.createNew("file.txt"));
+		Writer writer = new FileWriter(FileService.pathOutputFor("file.txt"));
 		writer.write("Hello World Writer");
 		writer.close();
 		System.out.println("end");

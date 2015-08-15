@@ -33,7 +33,7 @@ public class AppStreamInputOutput {
 		//OutputStream fos3 = new FileOutputStream("c:\\text.txt", false); //overwrites file
 		OutputStream output = null;
 		try {
-		  output = new FileOutputStream(FileService.createNew("file.txt"),true);
+		  output = new FileOutputStream(FileService.pathOutputFor("file.txt"),true);
 
 		 for (int i = 0; i< 5; i++) {
 		    int data = i;

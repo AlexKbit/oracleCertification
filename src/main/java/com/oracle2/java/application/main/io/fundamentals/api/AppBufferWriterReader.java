@@ -18,7 +18,7 @@ public class AppBufferWriterReader {
 		r.close();
 		
 		BufferedWriter input = new BufferedWriter(new FileWriter(
-				FileService.createNew("file.txt")), 1024);
+				FileService.pathOutputFor("file.txt")), 1024);
 		input.write("This BufferedWriter");
 		input.close();
 
