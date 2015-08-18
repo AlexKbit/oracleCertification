@@ -11,7 +11,7 @@ public class FileService {
 	public static final String INPUT_FILES = "./inputFiles";
 	public static final String OUTPUT_FILES = "./outputFiles";
 	
-	public static final String FILE_WITH_LINES = Paths.get(OUTPUT_FILES, "fileWithLines.txt").toString();
+	public static final String FILE_WITH_LINES = Paths.get(INPUT_FILES, "fileWithLines.txt").toString();
 	public static final String OUTPUT_DIRECTORY_WITH_GENERATE = Paths.get(OUTPUT_FILES, "Generate").toString();
 	
 	public static final boolean createOutputDirectories() {
