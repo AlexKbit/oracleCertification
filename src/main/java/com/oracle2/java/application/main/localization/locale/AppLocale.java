@@ -1,4 +1,4 @@
-package com.oracle2.java.application.main.locale;
+package com.oracle2.java.application.main.localization.locale;
 
 import java.util.Locale;
 
