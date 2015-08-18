@@ -25,10 +25,13 @@ public class FileService {
 	
 	public static final Path generateDirWithFiles() {
 		File dFile = Paths.get(OUTPUT_DIRECTORY_WITH_GENERATE).toFile();
+		
+		removeFiles(OUTPUT_DIRECTORY_WITH_GENERATE);
+		
 		dFile.mkdirs();
 		Random rd = new Random();
 		for (int i=0; i< rd.nextInt(5)+5; i++) {
-			File file = Paths.get(dFile.getAbsolutePath().toString(), String.valueOf(rd.nextInt(10000)+1000)).toFile();
+			File file = Paths.get(dFile.getAbsolutePath().toString(), "generate" + String.valueOf(rd.nextInt(10000)+1000) + ".txt").toFile();
 			try {
 				file.createNewFile();
 			} catch (IOException e) {
@@ -36,6 +39,13 @@ public class FileService {
 			}
 		}
 		return Paths.get(OUTPUT_DIRECTORY_WITH_GENERATE);
+	}
+	
+	private static void removeFiles(String directory) {
+		File dir = new File(directory);
+		if (!dir.exists()) return;
+		for (File file: dir.listFiles()) 
+		    if (file.isFile()) file.delete();
 	}
 
 }
