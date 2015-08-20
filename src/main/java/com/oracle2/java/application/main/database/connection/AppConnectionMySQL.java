@@ -4,30 +4,25 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
-public class AppConnection {
 
-	public static void main(String[] args) throws Exception {
+public class AppConnectionMySQL {
+
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		
-		Connection connection = getConnection();
+		// Java version 1.7+ JDBC drivers adding automaticaly
+		
+		Properties props = new Properties();
+		props.put("user", "root");
+		props.put("password", "root");
+		
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/certification_db", props);
+		
+		System.out.println("Connection success: "+ !connection.isClosed());
 		showMetaData(connection);
+		
 		connection.close();
-	}
-	
-	private static Connection getConnection() throws Exception {
-		// register the driver 
-        String sDriverName = "org.sqlite.JDBC";
-        Class.forName(sDriverName);
-        
-        String sTempDb = "sqlLite.db";
-        String sJdbc = "jdbc:sqlite";
-        String sDbUrl = sJdbc + ":" + sTempDb;
-        System.out.println("Database url = " + sDbUrl);
-        
-        // create a database connection
-        Connection conn = DriverManager.getConnection(sDbUrl);
-        System.out.println("Connected to the database");
-        return conn;
 	}
 	
 	private static void showMetaData(Connection connection) throws SQLException {
