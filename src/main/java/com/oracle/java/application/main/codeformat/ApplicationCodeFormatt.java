@@ -12,10 +12,10 @@ public class ApplicationCodeFormatt {
 		System.out.println(_1_);
 		;
 		
-		Schei–”—— »…e();
+		Scheisadse();
 	}}}}};
 	
-	public static void Schei–”—— »…e() {
+	public static void Scheisadse() {
 		System.out.println("OMG!");
 	}
 };
