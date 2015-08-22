@@ -52,6 +52,7 @@ public class AppConnectionMySQL {
 		
 		while(rs.next()) {
             users.add(User.create(rs.getInt("id"), rs.getString("name"), rs.getString("surname"), rs.getString("password"), rs.getString("email")));
+            System.out.println("Loading: "+User.create(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5)).toString());
         }
 		
 		return users;
