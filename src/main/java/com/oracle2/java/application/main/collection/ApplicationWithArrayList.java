@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import com.mytest.ICertificationTest;
@@ -79,8 +78,6 @@ public class ApplicationWithArrayList implements ICertificationTest{
 		list.add("7");
 		list.add("8");
 		list.add("9");
-		
-		list.remove(9);
 		
 		sysout(list.size());
 		System.out.println("In memory = "+getObjectSize(list));
