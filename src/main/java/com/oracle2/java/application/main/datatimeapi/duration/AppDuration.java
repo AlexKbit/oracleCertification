@@ -11,5 +11,19 @@ public class AppDuration {
 		
 		System.out.println(d1);
 		System.out.println(d2);
+		
+		toThisString();
+	}
+	
+	private static void toThisString() {
+		Duration d = Duration.ofDays(2);
+		System.out.println(d.toString());
+		d = Duration.ofHours(4);
+		System.out.println(d.toString());
+		d = Duration.ofMinutes(6);
+		System.out.println(d.toString());
+
+		d = Duration.ZERO;
+		System.out.println(d.toString());
 	}
 }
