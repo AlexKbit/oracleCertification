@@ -28,6 +28,10 @@ public class AppPathMethods {
 		p2 = Paths.get("C://test//mytest2//newdirs//dir2"); 
 		System.out.println(p1.resolve(p2)); // ..\file2.java
 		System.out.println(p2.resolve(p1)); // ..\file1.java
+		
+		//Path np = null;
+		//System.out.println(p2.resolve(np)); // throw NPE
+		//System.out.println(p2.resolve(null)); // compiler time error
 	}
 	
 	private static void relativize() {
